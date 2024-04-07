@@ -14,8 +14,8 @@
         android:textColor="@color/white"
         android:layout_marginStart="@dimen/main_menu_medium_margin"
         android:layout_marginTop="14dp"
-        android:layout_marginBottom="24dp"
-        android:textSize="22dp"/>
+        android:layout_marginBottom="@dimen/margin"
+        android:textSize="@dimen/main_menu_text_size"/>
     <Button
         app:icon="@drawable/ic_search"
         app:iconGravity="textStart"
@@ -29,9 +29,10 @@
         android:layout_weight="1"
         android:backgroundTint="@color/white"
         android:text="@string/search"
+        android:textSize="@dimen/main_menu_text_size"
         android:textColor="@color/black"
         android:textAllCaps="false"
-        app:cornerRadius="16dp"
+        app:cornerRadius="@dimen/button_corner_radius"
         android:id="@+id/button_search"/>
     <Button
         android:layout_width="match_parent"
@@ -46,9 +47,10 @@
         android:layout_weight="1"
         android:backgroundTint="@color/white"
         android:text="@string/media_library"
+        android:textSize="@dimen/main_menu_text_size"
         android:textColor="@color/black"
         android:textAllCaps="false"
-        app:cornerRadius="16dp"
+        app:cornerRadius="@dimen/button_corner_radius"
         android:id="@+id/button_media"/>
     <Button
         android:layout_width="match_parent"
@@ -64,9 +66,10 @@
         android:layout_weight="1"
         android:backgroundTint="@color/white"
         android:text="@string/settings"
+        android:textSize="@dimen/main_menu_text_size"
         android:textColor="@color/black"
         android:textAllCaps="false"
-        app:cornerRadius="16dp"
+        app:cornerRadius="@dimen/button_corner_radius"
         android:id="@+id/button_settings"/>
 
 

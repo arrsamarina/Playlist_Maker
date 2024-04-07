@@ -2,6 +2,15 @@
 <resources>
     <dimen name="main_menu_little_padding">8dp</dimen>
     <dimen name="main_menu_medium_margin">16dp</dimen>
-    <dimen name="settings_text_size">16sp</dimen>
+    <dimen name="text_size">16sp</dimen>
     <dimen name="image_icon_view">24dp</dimen>
+    <dimen name="button_corner_radius">16dp</dimen>
+    <dimen name="image_settings_padding">4dp</dimen>
+    <dimen name="settings_paragraph_height">61dp</dimen>
+    <dimen name="settings_start">16dp</dimen>
+    <dimen name="big_image_button">48dp</dimen>
+    <dimen name="linear_padding_end">12dp</dimen>
+    <dimen name="main_menu_text_size">22sp</dimen>
+    <dimen name="margin">24dp</dimen>
+    <dimen name="null_size">0dp</dimen>
 </resources>
