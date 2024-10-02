@@ -3,5 +3,15 @@
     <style name="Base.Theme.Playlist_Maker" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimaryFixedVariant">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/dark</item>
+        <item name="colorOnSecondary">@color/dark</item>
+        <item name="colorOnSecondaryFixedVariant">@color/black</item>
     </style>
 </resources>

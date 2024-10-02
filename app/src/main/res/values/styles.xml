@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MainMenuButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">?attr/colorOnSecondary</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/medium_margin</item>
+        <item name="android:layout_marginRight">@dimen/medium_margin</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/main_menu_text_size</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="android:backgroundTint">?attr/colorSecondary</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+    <style name="SettingsMenuLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/settings_paragraph_height</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingEnd">@dimen/linear_padding</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="SettingsMenuTextView">
+        <item name="android:layout_width">@dimen/null_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/settings_start</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
+    </style>
+    <style name="SettingsMenuImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="GeneralTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="GeneralTitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/main_menu_text_size</item>
+        <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+    <style name="RoundCorner">
+        <item name="cornerRadius">@dimen/mini_button_corner_radius</item>
+    </style>
+</resources>
