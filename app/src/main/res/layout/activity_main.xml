@@ -9,7 +9,7 @@
     android:paddingTop="4dp">
 
     <androidx.appcompat.widget.Toolbar
-        style="@style/GeneralTitle">
+        style="@style/General">
         <TextView
             style="@style/GeneralTitleText"
             android:text="@string/app_name"

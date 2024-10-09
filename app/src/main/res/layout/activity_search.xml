@@ -8,69 +8,51 @@
     android:backgroundTint="?attr/colorSecondaryVariant"
     tools:context=".SearchActivity"
     android:id="@+id/container">
+
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        style="@style/GeneralTitle"
+        android:id="@+id/toolbarSearch"
+        style="@style/General"
+        app:titleTextColor="?attr/colorOnPrimary"
+        android:layout_margin="4dp"
+        app:title="@string/search"
+        app:titleTextAppearance="@style/GeneralTitleText"
+        app:navigationIcon="@drawable/ic_arrowback" />
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp">
-
-        <ImageButton
-            android:id="@+id/back"
-            android:layout_width="@dimen/big_image_button"
-            android:layout_height="@dimen/big_image_button"
-            android:backgroundTint="?attr/colorSecondaryVariant"
-            android:src="@drawable/ic_arrowback"
-            android:contentDescription="@string/back_description"
-            android:adjustViewBounds="true"
-            app:tint="?attr/colorPrimaryVariant" />
-
-        <TextView
-            style="@style/GeneralTitleText"
-            android:text="@string/search"
-            android:paddingStart="@dimen/linear_padding"
-            android:textColor="?attr/colorOnPrimary" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/medium_margin"
-        android:background="@drawable/ic_search_background"
+        android:layout_height="52dp"
+        android:layout_marginTop="@dimen/little_padding"
+        android:layout_marginLeft="@dimen/medium_margin"
+        android:layout_marginRight="@dimen/medium_margin"
         android:orientation="horizontal"
-        android:padding="@dimen/linear_padding"
         app:cornerRadius="@dimen/mini_button_corner_radius"
-        style="@style/RoundCorner">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_search"
-            android:contentDescription="@string/search"
-            app:tint="?attr/colorOnPrimaryFixedVariant" />
+        android:padding="@dimen/linear_padding"
+        style="@style/RoundCorner"
+        android:background="@drawable/ic_rounded_background">
 
         <EditText
             android:id="@+id/searchEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
             android:hint="@string/search"
             android:textColorHint="?attr/colorOnSecondaryFixedVariant"
             android:textColor="?attr/colorOnPrimary"
             android:maxLines="1"
             android:inputType="text"
-            android:background="@color/grey"
+            android:background="@drawable/ic_search_background"
             android:paddingStart="@dimen/little_padding"
             android:paddingEnd="@dimen/little_padding"
-            />
-
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableTint="?attr/colorOnPrimaryFixedVariant"
+            android:drawablePadding="@dimen/little_padding"
+            android:textCursorDrawable="@drawable/cursor_drawable"/>
         <ImageView
             android:id="@+id/clearIcon"
+            android:src="@drawable/clear_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_gravity="end|center"
             android:visibility="gone" />
-    </LinearLayout>
+    </FrameLayout>
 </LinearLayout>

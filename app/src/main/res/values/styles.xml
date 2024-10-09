@@ -38,7 +38,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
     </style>
-    <style name="GeneralTitle">
+    <style name="General">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -47,6 +47,14 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/main_menu_text_size</item>
         <item name="android:fontFamily">@font/ys_display_medium</item>
+    </style>
+    <style name="GeneralMaterialView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:paddingVertical">20dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
     </style>
     <style name="RoundCorner">
         <item name="cornerRadius">@dimen/mini_button_corner_radius</item>

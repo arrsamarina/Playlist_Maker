@@ -8,83 +8,39 @@
     android:backgroundTint="?attr/colorSecondaryVariant"
     tools:context=".SettingsActivity">
     <androidx.appcompat.widget.Toolbar
-        style="@style/GeneralTitle"
+        android:id="@+id/toolbarSettings"
+        style="@style/General"
+        app:titleTextColor="?attr/colorOnPrimary"
         android:layout_margin="4dp"
-        android:layout_marginBottom="@dimen/margin"
-        >
-        <ImageButton
-            android:id="@+id/back"
-            android:layout_width="@dimen/big_image_button"
-            android:layout_height="@dimen/big_image_button"
-            android:backgroundTint="?attr/colorSecondaryVariant"
-            android:src="@drawable/ic_arrowback"
-            android:contentDescription="@string/back_description"
-            android:adjustViewBounds="true"
-            app:tint="?attr/colorPrimaryVariant"
-            />
-        <TextView
-            style="@style/GeneralTitleText"
-            android:text="@string/settings"
-            android:paddingStart="12dp"
-            android:textColor="?attr/colorOnPrimary"/>
+        app:title="@string/settings"
+        app:titleTextAppearance="@style/GeneralTitleText"
+        app:navigationIcon="@drawable/ic_arrowback" />
 
-    </androidx.appcompat.widget.Toolbar>
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="20dp"
+        android:text="@string/dark_theme"
+        android:textSize="16sp"
+        android:thumbTintMode="screen" />
 
-    <FrameLayout
-        style="@style/SettingsMenuLayout"
-        android:layout_marginTop="@dimen/margin"
-        android:paddingEnd="6dp"
-        android:paddingStart="@dimen/settings_start"
-        >
-        <Switch
-            android:text="@string/dark_theme"
-            android:id="@+id/themeSwitcher"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:textSize="@dimen/text_size"
-            tools:ignore="UseSwitchCompatOrMaterialXml"
-            android:fontFamily="@font/ys_display_regular"
-            />
-    </FrameLayout>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/buttonShare"
+        style="@style/GeneralMaterialView"
+        android:drawableEnd="@drawable/ic_share"
+        android:text="@string/share_description"/>
 
-    <LinearLayout
-        style="@style/SettingsMenuLayout"
-        android:id="@+id/buttonShare">
-        <TextView
-            style="@style/SettingsMenuTextView"
-            android:text="@string/share_description"
-            />
-        <ImageView
-            style="@style/SettingsMenuImageView"
-            android:src="@drawable/ic_share" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/buttonSupport"
+        style="@style/GeneralMaterialView"
+        android:drawableEnd="@drawable/ic_helper"
+        android:text="@string/support_description"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        style="@style/SettingsMenuLayout"
-        android:id="@+id/buttonSupport">
-        <TextView
-            style="@style/SettingsMenuTextView"
-            android:text="@string/support_description"
-            />
-        <ImageView
-            style="@style/SettingsMenuImageView"
-            android:src="@drawable/ic_helper" />
-    </LinearLayout>
-    <LinearLayout
-        style="@style/SettingsMenuLayout"
-        android:id="@+id/buttonTerms">
-
-        <TextView
-            style="@style/SettingsMenuTextView"
-            android:text="@string/terms_of_use_description"
-            />
-
-        <ImageView
-            style="@style/SettingsMenuImageView"
-            android:src="@drawable/ic_forward" />
-    </LinearLayout>
-
-
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/buttonTerms"
+        style="@style/GeneralMaterialView"
+        android:drawableEnd="@drawable/ic_forward"
+        android:text="@string/terms_of_use_description"/>
 </LinearLayout>

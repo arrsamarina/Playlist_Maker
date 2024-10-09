@@ -1,6 +1,4 @@
 package com.practicum.playlist_maker
-
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,9 +7,7 @@ import android.text.TextWatcher
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.LinearLayout
 
 class SearchActivity : AppCompatActivity() {
     private var searchText: String? = null
@@ -20,13 +16,13 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        val backButton = findViewById<ImageButton>(R.id.back)
         val inputEditText = findViewById<EditText>(R.id.searchEditText)
         val clearButton = findViewById<ImageView>(R.id.clearIcon)
 
-        // кнопка "назад" для завершения activity
-        backButton.setOnClickListener {
-            finish()
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbarSearch)
+        toolbar.setNavigationOnClickListener {
+            val backIntent = Intent(this, MainActivity::class.java)
+            startActivity(backIntent)
         }
 
         // кнопка отчистки запроса
@@ -40,20 +36,20 @@ class SearchActivity : AppCompatActivity() {
         // Восстановить фокус и доступ к полю при клике
         inputEditText.setOnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
-                inputEditText.isEnabled = true // Делаем поле снова активным
-                showKeyboard(inputEditText) // Показываем клавиатуру
+                inputEditText.isEnabled = true
+                showKeyboard(inputEditText)
             }
         }
 
         inputEditText.setOnClickListener {
             if (!inputEditText.isEnabled) {
-                inputEditText.isEnabled = true // Делаем поле снова активным
-                inputEditText.requestFocus() // Устанавливаем фокус на поле
-                showKeyboard(inputEditText) // Показываем клавиатуру
+                inputEditText.isEnabled = true
+                inputEditText.requestFocus()
+                showKeyboard(inputEditText)
             }
         }
 
-        // TextWatcher для отслеживания изменений текста в поисковой строке
+        // отслеживание изменений текста в поисковой строке
         val simpleTextWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 // заглушка
@@ -64,7 +60,7 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                // заглушка
+                searchText = s?.toString()
             }
         }
         inputEditText.addTextChangedListener(simpleTextWatcher)
