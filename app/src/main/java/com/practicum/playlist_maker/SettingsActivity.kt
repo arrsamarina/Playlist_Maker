@@ -41,11 +41,8 @@ class SettingsActivity : AppCompatActivity() {
                 putExtra(Intent.EXTRA_TEXT, body)
             }
 
-            if (emailIntent.resolveActivity(packageManager) != null) {
-                startActivity(emailIntent)
-            } else {
-                Toast.makeText(this, getString(R.string.no_email_client_found), Toast.LENGTH_LONG).show()
-            }
+            startActivity(emailIntent)
+
         }
 
         val buttonTerms = findViewById<MaterialTextView>(R.id.buttonTerms)

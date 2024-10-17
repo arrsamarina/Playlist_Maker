@@ -10,7 +10,6 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarSettings"
         style="@style/General"
-        app:titleTextColor="?attr/colorOnPrimary"
         android:layout_margin="4dp"
         app:title="@string/settings"
         app:titleTextAppearance="@style/GeneralTitleText"
@@ -24,6 +23,7 @@
         android:paddingVertical="20dp"
         android:text="@string/dark_theme"
         android:textSize="16sp"
+        android:layout_marginTop="@dimen/margin"
         android:thumbTintMode="screen" />
 
     <com.google.android.material.textview.MaterialTextView

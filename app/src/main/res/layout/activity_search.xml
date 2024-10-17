@@ -12,7 +12,6 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarSearch"
         style="@style/General"
-        app:titleTextColor="?attr/colorOnPrimary"
         android:layout_margin="4dp"
         app:title="@string/search"
         app:titleTextAppearance="@style/GeneralTitleText"
@@ -21,14 +20,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:layout_marginTop="@dimen/little_padding"
-        android:layout_marginLeft="@dimen/medium_margin"
-        android:layout_marginRight="@dimen/medium_margin"
-        android:orientation="horizontal"
-        app:cornerRadius="@dimen/mini_button_corner_radius"
-        android:padding="@dimen/linear_padding"
-        style="@style/RoundCorner"
-        android:background="@drawable/ic_rounded_background">
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="@dimen/little_padding">
 
         <EditText
             android:id="@+id/searchEditText"
